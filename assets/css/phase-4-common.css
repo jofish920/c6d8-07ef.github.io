@@ -1,0 +1,144 @@
+:root
+{
+    --nav-link-background: rgba(0,0,0,10%);
+    --nav-link-hover-background: rgba(0,0,0,20%);
+    --header-background: goldenrod;
+    --article-footer-background: lightsteelblue;
+    --body-background: lightgoldenrodyellow;
+    --title-color: navy;
+    --nav-link-color: navy;
+
+    --nav-link-background: rgba(0,0,0,10%);
+    --nav-link-hover-background: rgba(0,0,0,20%);
+
+    /* Defaults for fonts and sizes should be overridden in desktop css */
+
+    --nav-font: 16px Verdana, Arial, Helvetica, sans-serif;
+    --title-font: 24px Verdana, Arial, Helvetica, sans-serif;
+    --copyright-font: 10px Verdana, Arial, Helvetica, sans-serif;
+
+    --logo-size: 32px;
+    --title-height: var(--logo-size);
+    --header-height: var(--title-height);
+
+    --app-min-table-width: 15em;
+
+    --nav-pad-y: 3px;
+}
+
+h1
+{
+    display: none;
+}
+
+h2
+{
+    margin: var(--article-title-margin)
+}
+
+body
+{
+    background-color: var(--body-background);
+}
+
+header,
+footer
+{
+    background-color: var(--header-background);
+    text-align: center;
+}
+
+body > header
+{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: var(--header-height);
+    text-align: center;
+    padding-bottom: 0;
+
+    display: grid;
+    grid-template-columns: var(--logo-size) 1fr var(--logo-size);
+    grid-column-gap: 0;
+}
+
+.logo,
+.site-name,
+.menu-button
+{
+    font: var(--title-font);
+    height: var(--title-height);
+}
+
+body > footer
+{
+    font: var(--copyright-font);
+}
+
+nav
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(8em, 1fr));
+    place-content: space-between;
+    width: 100%;
+    font: var(--nav-font);
+    text-align: center;
+}
+
+nav > a
+{
+    display: block;
+    height: var(--nav-height);
+    text-decoration: none;
+    background-color: var(--nav-link-background);
+    color: var(--nav-link-color);
+    padding: var(--nav-pad-y) 0 var(--nav-pad-y) 0;
+    border-left: thin solid gray;
+}
+
+/* Not needed for mobile - but used for narrow desktop */
+nav > a:hover
+{
+    background-color: var(--nav-link-hover-background);
+}
+
+section footer,
+article footer
+{
+    background-color: var(--article-footer-background);
+}
+
+footer > *:not(nav)
+{
+    padding-bottom: var(--footer-item-gap);
+    margin-bottom: 0;
+}
+
+main {
+    margin-top: calc(var(--header-height) + var(--header-gap));
+}
+
+figure
+{
+    width: 100%;
+    border: thin dotted gray;
+}
+
+figure img
+{
+    width: 100%;
+    object-fit: contain;
+}
+
+figcaption
+{
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 60%);
+    color: white;
+}
+
+.hidden
+{
+    display: none;
+}

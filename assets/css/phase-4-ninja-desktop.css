@@ -1,0 +1,19 @@
+/* File: assets/css/phase-4-ninja-desktop.css */
+
+.result-container div.url-lookup-result
+{
+    grid-template-columns: auto 1fr;
+    text-align: left;
+}
+
+.url-lookup-label
+{
+    grid-column: 1;
+}
+
+.url-lookup-value
+{
+    grid-column: 2;
+}
+
+/* End File: assets/css/phase-4-ninja-desktop.css */

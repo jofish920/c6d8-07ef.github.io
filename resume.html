@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JFM: Resume</title>
+  <link rel="stylesheet" href="./assets/css/site.css">
+  <script type="module">
+      import {init} from "./assets/js/phase-5-popup.js";
+      init();
+  </script>
+</head>
+<body>
+<header class="page-header">
+  <img class="h-12 flex-0" src="assets/img/Dummy64x64.jpg" alt="Site Logo">
+  <a class="flex flex-col items-center title-font">
+    <h1 class="text-md font-bold text-center">
+      <span class="hidden sm:inline">Certificate IV</span>
+      <span aria-hidden="true" class="sm:hidden">Cert-IV</span>
+      in IT (Programming)
+    </h1>
+    <h2 class="text-sm font-bold text-center">
+      <span class="hidden sm:inline">Web Tech Project – </span>
+      Resumé
+    </h2>
+  </a>
+  <section class="popup-menu group relative">
+    <!-- todo: support keyboard navigation using cursor keys -->
+    <!-- todo: limit tabbing to items and header when menu displayed -->
+    <!-- todo: implement escape to exit menu -->
+    <!-- todo: more contrast between focus colour and background in menus -->
+    <button type="button" class="popup-button group" aria-haspopup="menu">
+      WTP
+      <svg id="icon-bars"
+           viewBox="0 0 448 512"
+           class="fill-current stroke-current h-5 ml-auto mr-auto"
+           aria-label="Icon for site links menu"
+      >
+        <use xlink:href="./assets/img/menu-icon.svg#menu-icon"></use>
+      </svg>
+    </button>
+    <nav class="relative">
+      <ul class="
+                    nav-list right-0 top-0
+                    group-[.active-menu]:block
+                ">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact Us!</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About this Site</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="resume.html">Josef's Resume</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="mywork.html">Example Project(s)</a>
+        </li>
+      </ul>
+    </nav>
+  </section>
+</header>
+
+<main class="flex-1">
+    <section class="m-3">
+      <h3 class="title-card">Education</h3>
+      <div class="card-container card-grid">
+        <section class="card card-full">
+          <h2 class="card-head">School - 1978 to 1991</h2>
+          <p class="card-foot-body">
+            Before attending UWA, I spent time at Beehive Montessori, Nedlands Primary,
+            and Hollywood High schools.  I took the standard subjects for someone intending
+            to study a science-based subject at UWA: physics, chemistry, the two TEE math units,
+            and English Literature.  Social sciences, photography, and cooking rounded things
+            out, from what I remember.
+          </p>
+        </section>
+        <section id="uwa-bsc" class="card full-card">
+          <h3 class="card-head">UWA (BSc. Hons) - 1992 to 1996</h3>
+          <p class="card-foot-body">
+            I spent 1992 to 1996 completing a science degree at UWA.
+            My time there was split between Linguistics, Mathematics, and Computer Science.
+            While completing enough units for a major in pure mathematics, my official majors
+            were in Linguistics and Computing, and honours was split between the two.
+          </p>
+        </section>
+        <section id="uwa-bsc-math" class="card full-card">
+          <h3 class="card-head">UWA (BSc.) Mathematics</h3>
+          <ul class="card-foot-body">
+            <li>1992 – Mathematics and Math Sciences (Roughly: pure vs applied)</li>
+            <li>1993 – Mathematics and Math Sciences, Analysis (2P2), Algebra
+              &amp; Discrete Mathematics</li>
+            <li>1994 – Topics in Algebra (groups, rings, etc.), Combinatorics and Geometry</li>
+            <li>1995 – Math Sciences, Number Theory and its Application, Robotics.</li>
+          </ul>
+        </section>
+        <section id="uwa-bsc-ling" class="card full-card">
+          <h3 class="card-head">UWA (BSc.) Linguistics</h3>
+          <ul class="card-foot-body">
+            <li>1992 – Linguistics 100 (general intro)</li>
+            <li>1993 – Linguistics 252 &amp; 253 (Computational and something else?)</li>
+            <li>1993 – Linguistics 310 &amp; 399 (Australian languages and historical?)</li>
+            <li>1994 – Topics in Algebra (groups, rings, etc.), Combinatorics and Geometry</li>
+            <li>1995 – Math Sciences, Number Theory and its Applications, Robotics.</li>
+          </ul>
+        </section>
+        <section id="uwa-bsc-comp" class="card full-card">
+          <h3 class="card-head">UWA (BSc.) Computing</h3>
+          <ul class="card-foot-body">
+            <li>1992 – Programming Techniques (procedural), Applicative Programming (logic &amp; functional)</li>
+            <li>1993 – Data Structures, Operating Systems, Computer Systems Programming</li>
+            <li>1994 – Algorithms, Computer Networks</li>
+            <li>1995 – Concurrent Programming, Programming Language Implementation</li>
+            <li>1996 – Honours Project – Parsing Warpiri using HPSG.</li>
+          </ul>
+        </section>
+        <section id="uwa-ext-biol" class="card full-card">
+          <h3 class="card-head">UWA (Extension) – 1997 – Biology</h3>
+          <p class="card-foot-body">I took some introductory biology units through UWA extension, with an
+            interest in applying computing to problems involving biological sciences;
+            moving to Sydney to start a PhD put an end to this.
+          </p>
+        </section>
+        <section id="macq-phd" class="card full-card">
+          <h3 class="card-head">PhD – 1998 to 2006 – Natural Language Processing</h3>
+          <p class="card-body">In 1998, I received a scholarship to work on a PhD with the Natural Language Processing
+            group within the Microsoft Research Initiative at Macquarie University.  Work in this
+            group focused on shallow techniques for NLP – particularly in the area of text generation.
+            I ended up choosing to look at the resolution of associative anaphora within the context of
+            knowledge acquisition and text summarisation.</p>
+          <p class="card-foot-body">Unfortunately, the group folded at the end of my first year, and although I continued
+            on as a student within the computing department at Macquarie, I did not manage to complete
+            work on my thesis.</p>
+        </section>
+        <section class="card full-card">
+          <h3 class="card-head">Gap – Illness and Depression</h3>
+          <p class="card-foot-body">
+            At the end of my time in Sydney, I was depressed and in fairly poor health.
+            Nothing was ever resolved as to what was wrong with me, but I ended up abandoning
+            work on my thesis and came back to Perth.  This lasted for almost a decade,
+            with me doing small projects and maintenance work on the software that I wrote
+            for ATTA, before COVID arrived and I started to regain my interest in life.
+            Since then, I have worked to regain some skills that might be useful in finding work,
+            probably in the IT industry.
+          </p>
+        </section>
+        <section class="card full-card">
+          <h3 class="card-head">TAFE – Infection Control</h3>
+          <p class="card-foot-body">
+            Towards the end of the COVID epidemic, it seemed like if I were to get any jobs
+            where I needed to attend in person then it would be useful to know something about
+            infection control.  There were free online courses on offer through TAFE, and I took one
+            as both a means to prepare for work in a world where COVID was still a major issue,
+            and to get myself back into shape to study and work.
+          </p>
+        </section>
+        <section class="card full-card">
+          <h3 class="card-head">
+            TAFE – Certificate IV in IT (Programming)
+          </h3>
+          <p class="card-foot-body">
+            I am currently nearing the end of working on a Cert-IV course in IT at
+            North Metroplitan TAFE.  It has been interesting.
+          </p>
+        </section>
+      </div>
+    </section>
+    <section class="m-3">
+      <h2 class="card title-card">Work</h2>
+      <div class="card-container card-grid">
+        <section class="card full-card">
+          <h3 class="card-head">Timetable Software (Volunteer)</h3>
+          <p class="card-foot-body">The year before I started at UWA, I wrote some software for the
+            faculty of science to help allocating students to workshop sessions in a way that
+            would not conflict with any of their classes.</p>
+        </section>
+        <section class="card full-card">
+          <h3 class="card-head">Programmer at Jarvis Software</h3>
+          <p class="card-foot-body">Employed by Jarvis Software as a part-time programmer for work on the Jarvis Education platform
+            and on the Dealer Administration System for Seal Corp.</p>
+        </section>
+        <section class="card full-card">
+          <h3 class="card-head">Clinical Immunology</h3>
+          <p class="card-foot-body">Helped a group working on DNA sequencing in the Department of Clinical Immunology at
+            UWA – which operated out of Royal Perth Hospital.  Most of my time was spent working on
+            tools related to multi-locus DNA sequencing for use in tasks such as determining compatability
+            for transplants and tracking mutations in HIV.</p>
+        </section>
+        <section class="card full-card">
+          <h3 class="card-head">Economics</h3>
+          <p class="card-foot-body">Worked on software for a PhD student in Economics and Commerce to help extract structured
+            information from plain text reports to the Australian Stock Exchenge.</p>
+        </section>
+        <section class="card full-card">
+          <h3 class="card-head">Timing Software</h3>
+          <p class="card-foot-body">Created AttaTime: timekeeping software used in various forms by the Australian Time Trials
+            Association from 1992 until 2025.</p>
+        </section>
+        <section class="card full-card">
+          <h3 class="card-head">
+            Linguistics – Aboriginal Languages Database
+          </h3>
+          <p class="card-foot-body">
+            Created a database and simple web-interface to assist Alan Dench in some research on adapting
+            techniques to reconstructing the original forms of words from lost languages based on records
+            of people not speakers of the language.
+          </p>
+        </section>
+        <section class="card full-card">
+          <h3 class="card-head">Dunmore Lang College – 2008 to 2010 – Computing Tutor</h3>
+          <p class="card-foot-body">
+            My first three years at Macquarie, I stayed at one of the residential colleges on campus.
+            During that time I offset my living expenses by working as a computing tutor / administrator
+            for the student network.
+          </p>
+        </section>
+        <section class="card full-card">
+          <h3 class="card-head">Tutoring at Macquarie</h3>
+          <p class="card-foot-body">
+            During my time at Macquarie, I worked as a lab demonstrator for a number
+            of introductory programming units and a couple of higher-level courses in
+            logic programming and NLP.
+          </p>
+        </section>
+      </div>
+    </section>
+    <section class="m-3">
+      <h2 class="title-card">Hobbies</h2>
+      <div class="card-container card-grid">
+        <section class="card full-card">
+          <h3 class="card-head">Reading</h3>
+          <p class="card-foot-body">
+            I'm not sure if this qualifies as a hobby or a vice, but I enjoy reading.
+            Mostly fiction, but I can get sidetracked onto just about any topic.
+            The availability of reading material on the internet has not ben good for me.
+          </p>
+        </section>
+        <section class="card full-card">
+          <h3 class="card-head">Walking</h3>
+          <p class="card-foot-body">
+            I'm no longer up to the long gym sessions or bike rides that I used
+            to do while an undergraduate and at Macquarie.  Now that I am feeling a bit healthier,
+            I have taken up daily brisk walks as a way to get back into shape.
+          </p>
+        </section>
+        <section class="card full-card">
+          <h3 class="card-head">Cycling - Old</h3>
+          <p class="card-foot-body">
+            I used to do a fair amount of cycling for pleasure, as well as using
+            a bicycle as my main form of transport.  I rode with ATTA for a while before
+            getting caught up with timekeeping, and rode with a club in Sydney.
+            This is something that I'd like to get back to.
+          </p>
+        </section>
+        <section class="card full-card">
+          <h3 class="card-head">Horse Riding – Old</h3>
+          <p class="card-foot-body">
+            I used to do a fair bit of horse-riding before my move to Sydney.
+            Nothing too competitive, a couple of unofficial one-day events, some
+            dressage, and some showjumping.  I haven't looked at this in decades, though.
+          </p>
+        </section>
+        <section class="card full-card">
+          <h3 class="card-head">Programming</h3>
+          <p class="card-body">
+            I actually enjoy programming for fun.  Usually silly projects,
+            like writing a slide viewer in zsh that displays images under the
+            kitty terminal emulator or writing an extensible programming language
+            with a compiler and intermediate language interpreter written in javascript.
+            These are mostly silly things, and not worth releasing to the public.
+          </p>
+          <p class="card-body">
+            Since starting at TAFE, I have also developed a fondness for playing around with coding
+            environments like Jupyter Notebooks and Polyglot Notebooks.  I would like to spend more
+            time contributing to open-source projects, and intend to when I have more time.
+          </p>
+        </section>
+      </div>
+    </section>
+  </main>
+  <footer class="page-footer">
+    <img class="w-12 h-12" src="https://placehold.co/64?text=logo" alt="Logo">
+    <p>&copy; 2023 Adrian Gould and Josef Meyer. All rights reserved.</p>
+    <section class="popup-menu group">
+      <nav class="relative">
+        <ul class="nav-list bottom-0 right-0">
+          <li class="nav-item"><a class="nav-link" href="#">North Metro TAFE</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">ScreenCraft Dev Sites</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Copyright</a></li>
+        </ul>
+      </nav>
+      <button type="button" class="popup-button group" aria-haspopup="menu">
+        <svg id="icon-bars"
+             viewBox="0 0 448 512"
+             class="fill-current stroke-current h-5 ml-auto mr-auto"
+             aria-label="Icon for TAFE popup"
+        >
+          <use xlink:href="./assets/img/menu-icon.svg#menu-icon"></use>
+        </svg>
+        TAFE
+      </button>
+    </section>
+  </footer>
+
+</body>
+</html>

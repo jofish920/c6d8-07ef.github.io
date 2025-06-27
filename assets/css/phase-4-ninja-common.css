@@ -1,0 +1,87 @@
+
+/*
+ * File: phase-4-ninja-common.css
+ *
+ * Controls the rendering of the ninja-api applet.
+ * Uses embedded @container queries to obtain responsive layout.
+ *
+ * Note: has magic number in query; need to check if container queries
+ */
+
+#qr-code-result > img {
+    width: 100%;
+}
+
+.url-lookup-result:not(.hidden)
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fill, auto);
+
+    gap: 3px;
+
+    border: thin dotted black;
+    padding: 3px;
+
+    text-align: center;
+}
+
+.url-lookup-label
+{
+    font-weight: bold;
+}
+
+span.nowrap,
+.ninja-checkbox-container
+{
+    white-space: nowrap;
+}
+
+.api-selector input
+{
+    display: inline;
+}
+
+.url-lookup-label, .url-lookup-value
+{
+    border: thin dotted black;
+    width: 100%;
+    padding: 3px;
+}
+
+.ninja-form .api-parameters > *:not(.hidden),
+.ninja-form > button
+{
+    display: block;
+    width: 100%;
+    margin: 0.5em 0 0.5em 0;
+}
+
+.trace-node
+{
+    max-width: 20em;
+    overflow: auto;
+}
+
+.error-message
+{
+    width: 100%;
+    color: red;
+    font-size: 60%;
+}
+
+input:invalid
+{
+    border: 3px solid red;
+}
+
+.ninja-form.url-lookup .api-parameters > :not(.url-lookup),
+.ninja-form.qr-code .api-parameters > :not(.qr-code),
+.hidden
+{
+    display: none;
+}
+
+/*
+ * End File: phase-4-ninja-common.css
+ */

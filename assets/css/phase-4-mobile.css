@@ -1,0 +1,35 @@
+:root
+{
+    --logo-size: 32px;
+    --title-height: var(--logo-size);
+    --header-height: var(--title-height);
+    --header-gap: 10px;
+    --footer-item-gap: 0.2em;
+    --article-margin: 0px 10px 30px 10px;
+    --article-title-margin: 0px 0px 10px 0px;
+    --article-paragraph-margin: 10px 0px 0px 0px;
+}
+
+header
+{
+    display: grid;
+    grid-template-columns: var(--logo-size) 1fr var(--logo-size);
+    grid-template-rows: var(--header-height);
+    place-content: space-between center;
+    text-align: center;
+}
+
+header nav, aside
+{
+    display: none;
+}
+
+article
+{
+    margin: var(--article-margin);
+}
+
+article > :not(h2)
+{
+    margin: var(--article-paragraph-margin)
+}

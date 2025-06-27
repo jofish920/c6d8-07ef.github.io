@@ -1,0 +1,104 @@
+:root
+{
+    --logo-size: 32px;
+
+    --nav-height: 24px;
+    --header-gap: 0.75em;
+
+    --main-width: 90%;
+    --column-gap: 1.25em;
+
+    --article-margin: 0 0 30px 0;
+    --article-paragraph-margin: 10px 0 0 0;
+    --article-title-margin: 0 0 10px 0;
+
+    --footer-item-gap: 0;
+
+    --article-width: 3fr;
+    --aside-width: 2fr;
+
+    --article-count: 6;
+
+    --title-height: var(--logo-size);
+    --header-height: calc(var(--title-height) + var(--nav-height) + 2*var(--nav-pad-y));
+}
+
+header
+{
+    display: grid;
+    grid-template-columns: var(--logo-size) 1fr var(--logo-size);
+    grid-template-rows: var(--title-height) var(--nav-height);
+    grid-row-gap: 0;
+    place-content: stretch center;
+}
+
+.menu-button
+{
+    display: none;
+}
+
+main
+{
+    display: grid;
+    grid-template-columns: var(--article-width) var(--article-width) var(--aside-width);
+    grid-column-gap: var(--column-gap);
+
+    margin-top: calc(var(--header-height) + var(--header-gap));
+    width: var(--main-width);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* In draft specification */
+@supports (grid-template-rows: masonry)
+{
+    main
+    {
+        grid-template-rows: masonry;
+    }
+}
+
+body > footer
+{
+    display: grid;
+}
+
+header nav
+{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+aside
+{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: calc((3 + var(--article-count)) / 2);
+
+    margin: 0;
+}
+
+article,
+aside > section
+{
+    margin: var(--article-margin);
+}
+
+article > :not(h2),
+aside > section > :not(h2)
+{
+    margin: var(--article-paragraph-margin)
+}
+
+article:nth-of-type(2n+1)
+{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+article:nth-of-type(2n)
+{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}

@@ -1,0 +1,381 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+Need `input.css` to be at same level relative to root as
+`site.css` for editor to be able to use relative paths that
+work from either location.
+ */
+
+:root {
+    --jfm-focus-outline: none;
+    --jfm-focus-shadow: none;
+    --jfm-head-pad: 1rem;
+    --jfm-logo-size: 3rem;
+    --jfm-title-height: calc(
+        var(--jfm-logo-size) + 2 * var(--jfm-head-pad)
+    );
+    --jfm-title-gap: 1px;
+    --jfm-main-top: var(--jfm-title-height);
+}
+
+@layer components {
+    body
+    {
+        padding-top: var(--jfm-main-top);
+        @apply bg-site-body-not-front-bg;
+    }
+
+    body:focus, body:focus-within
+    {
+        @apply bg-site-body-bg;
+    }
+
+    .page-banner
+    {
+        @apply
+            w-full p-4 m-0
+            flex flex-row gap-4 items-center justify-between gap-2
+            bg-site-head-bg text-gray-800 flex-none
+        ;
+    }
+
+    .page-header
+    {
+        z-index: 100;
+        position: fixed;
+        height: var(--jfm-title-height);
+        @apply page-banner top-0;
+    }
+
+    .page-footer
+    {
+        @apply page-banner mt-1 md:mt-2;
+    }
+
+    .nav-item {
+        @apply
+            border border-t-0 border-x-0 border-gray-600
+            hover:border-gray-300 hover:text-white
+            focus-within:border-blue-300 focus-within:bg-site-nav-focus-bg
+            hover:focus-within:text-white
+            transition duration-500 ease-in-out p-0
+            whitespace-nowrap
+            w-full
+        ;
+    }
+
+    .nav-link
+    {
+        @apply block w-full h-full m-0 pb-2 pt-4;
+    }
+
+    .nav-list {
+        z-index: 10;
+        @apply
+            absolute
+            flex flex-col ml-auto
+            p-4 w-64
+            bg-site-menu-bg
+            hidden group-[.active-menu]:block
+        ;
+    }
+
+    .popup-button
+    {
+        @apply
+            h-12 w-12 bg-site-button-bg
+            border border-dashed border-gray-200
+            text-center
+            select-none
+            flex flex-col gap-0 items-center
+            hover:bg-site-menu-bg
+            hover:text-white
+        ;
+    }
+
+    .ul-blue-800
+    {
+        @apply border-2 border-t-0 border-x-0 border-blue-800;
+    }
+
+    .ul-blue-500
+    {
+        @apply border-2 border-t-0 border-x-0 border-blue-600;
+    }
+
+    .card-container,
+    .full-card
+    {
+        position: relative;
+    }
+
+    /* todo: fix border adjustment for hover to avoid resize of content */
+
+    .card-content
+    {
+        @apply
+            m-0 mx-[2px] border-0
+            group-focus-within:border-blue-600
+            group-focus-within:border-x-2
+            group-hover:border-blue-400
+            group-hover:border-x-2
+            group-hover:mx-0
+        ;
+    }
+
+    .card-start
+    {
+        @apply rounded-t-lg mt-[2px]
+            group-focus-within:border-t-2
+            group-hover:border-t-2
+            group-hover:mt-0
+        ;
+    }
+
+    .card-end
+    {
+        @apply rounded-b-lg mb-[2px]
+            group-focus-within:border-b-2
+            group-hover:border-b-2 group-hover:mb-0
+        ;
+    }
+
+    .title-card
+    {
+        @apply text-center card-head card-end m-0 mb-3;
+    }
+
+    .data-card.link-card
+    {
+        @apply hover:border hover:border-blue-400 hover:border-2
+            focus-within:border focus-within:border-blue-600
+            focus-within:border-2;
+    }
+
+    .data-card.link-card :focus-visible,
+    .data-card.link-card :focus
+    {
+        border: none;
+        box-shadow: none;
+    }
+
+    .card-head
+    {
+        @apply
+            card-content p-2 card-start
+            bg-site-cc-head-bg text-site-cc-head-fg
+            font-bold text-xl
+            text-center
+        ;
+    }
+
+    .card-body
+    {
+        @apply card-content px-2 bg-site-cc-body-bg text-site-cc-body-fg;
+    }
+
+    .first-in-card
+    {
+        @apply card-body pt-2 pb-1;
+    }
+
+    .last-in-card
+    {
+        @apply card-body pt-1 pb-2;
+    }
+
+    .only-in-card
+    {
+        @apply card-body py-2;
+    }
+
+    .next-in-card
+    {
+        @apply card-body py-1;
+    }
+
+    .card-foot-body
+    {
+        @apply last-in-card card-end;
+    }
+
+    .card-foot
+    {
+        @apply card-content card-end p-2 bg-gray-500 text-white mt-0 text-center;
+    }
+
+    .data-card
+    {
+        @apply card-body py-2 card-start card-end card-container;
+    }
+
+    .link-section-head
+    {
+        @apply font-bold text-blue-800;
+    }
+
+    .link-section-link
+    {
+        @apply hover:text-blue-500 hover:border-blue-500 ul-blue-800;
+    }
+
+    .grid-ragged-rows
+    {
+        @apply md:grid-rows-[repeat(auto-fill,auto)];
+    }
+
+    .pseudo-link
+    {
+        @apply
+            underline underline-offset-2 text-sky-700
+            group-hover:text-sky-500
+        ;
+    }
+
+    .link-card a::before
+    {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    a:focus,
+    a:focus-visible
+    {
+        outline: none;
+        box-shadow: none;
+    }
+
+    .outlined
+    {
+        outline-style: solid;
+        @apply outline-blue-300;
+    }
+
+    .link-card
+    {
+        @apply block card-container;
+    }
+
+    /*
+    .link-card:has(:focus-visible),
+    .link-card:has(:focus)
+    {
+        @apply ring-1 ring-blue-500;
+    }
+*/
+
+    .detail
+    {
+        @apply border border-solid border-blue-600 bg-gray-200;
+    }
+
+    .svg-bars
+    {
+        height: 1em;
+        width: 1em;
+        scale: 1.2;
+        background-image: url(../../assets/img/menu-icon.svg);
+        background-repeat: no-repeat;
+    }
+
+    .license
+    {
+        @apply pl-2;
+    }
+
+    .card-grid-1
+    {
+        @apply mx-3 grid grid-cols-1 gap-3;
+    }
+
+    .ref-grid,
+    .card-grid
+    {
+        @apply card-grid-1 md:grid-cols-2 lg:grid-cols-6;
+    }
+
+    .card-grid-2
+    {
+        @apply card-grid-1 lg:grid-cols-2;
+    }
+
+
+    .card
+    {
+        @apply col-span-1 lg:col-span-2;
+    }
+
+    .link-card
+    {
+        @apply md:col-span-1 lg:col-span-2;
+    }
+
+    /* todo: generalise to any card type */
+
+    .card-grid-3 > :nth-child(3n):nth-last-child(2) ~ .card,
+    p.link-card:nth-of-type(3n):nth-last-child(2) ~ .link-card
+    {
+        @apply lg:col-span-6;
+    }
+
+    .card-grid-3 > :nth-child(3n):nth-last-child(3) ~ .card,
+    p.link-card:nth-of-type(3n):nth-last-child(3) ~ .link-card
+    {
+        @apply lg:col-span-3;
+    }
+
+    .card-grid-3 > :nth-child(2n):nth-last-child(2) ~ .card,
+    .card-grid-2 > :nth-child(2n):nth-last-child(2) ~ .card,
+    p.link-card:nth-of-type(2n):nth-last-child(2) ~ .link-card
+    {
+        @apply md:col-span-2;
+    }
+
+    .pseudo-link
+    {
+        word-break: break-all;
+    }
+
+    .bib-author
+    {
+        font-weight: bold;
+    }
+
+    .bib-item-name
+    {
+        font-style: italic;
+    }
+
+    .bib-url
+    {
+        @apply pseudo-link;
+    }
+
+    .form-submit-button
+    {
+        @apply
+            bg-blue-200 rounded-md
+            hover:bg-blue-600 hover:text-white
+            disabled:bg-gray-500
+            disabled:text-gray-100
+        ;
+    }
+
+    .error
+    {
+        @apply text-red-400 text-sm;
+    }
+
+    figcaption
+    {
+        text-align: center;
+        background-color: rgba(0, 0, 0, 60%);
+        color: white;
+    }
+}

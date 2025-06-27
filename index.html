@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<!-- todo: fix column layout -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Josef Meyer | Web Technology | Cert 4 IT (Programming)</title>
+    <link rel="stylesheet" href="./assets/css/site.css">
+    <script type="module">
+        import {init} from "./assets/js/phase-5-popup.js";
+        init();
+    </script>
+</head>
+<body class="flex flex-col items-fill h-screen bg-site-body-bg">
+<header class="page-header">
+    <img class="h-12 flex-0" src="assets/img/site-icon.svg" alt="Site Logo">
+    <a class="flex flex-col items-center title-font">
+        <h1 class="text-md font-bold text-center">
+            <span class="hidden sm:inline">Certificate IV</span>
+            <span aria-hidden="true" class="sm:hidden">Cert-IV</span>
+            in IT (Programming)
+        </h1>
+        <h2 class="text-sm font-bold text-center">
+            <span class="hidden sm:inline">Web Tech Project –</span>
+            Home
+        </h2>
+    </a>
+    <section class="popup-menu group relative">
+        <!-- todo: limit tabbing to items and header when menu displayed -->
+        <button type="button" class="popup-button group" aria-haspopup="menu">
+            WTP
+            <svg id="icon-bars"
+                 viewBox="0 0 448 512"
+                 class="fill-current stroke-current h-5 ml-auto mr-auto"
+                 aria-label="Icon for site links menu"
+            >
+                <use xlink:href="./assets/img/menu-icon.svg#menu-icon"></use>
+            </svg>
+        </button>
+        <nav class="relative">
+            <ul class="
+                    nav-list right-0 top-0
+                    group-[.active-menu]:block
+                ">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us!</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About this Site</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="resume.html">Josef's Resume</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="mywork.html">Example Project(s)</a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+</header>
+<main class="
+    relative flex-1 flex flex-col gap-1 px-1 md:grid md:grid-cols-3 gap-4 md:px-4 mt-2
+">
+    <section class="relative flex-1 md:col-span-2">
+        <h3 class="title-card">Pages</h3>
+        <div class="card-container card-grid">
+            <article class="full-card link-card group">
+                <h3 class="card-head">Contact</h3>
+                <p class="card-foot-body">
+                    A form for getting in
+                    <a href="contact.html" class="pseudo-link">contact</a>
+                    with us!.
+                </p>
+            </article>
+            <article class="full-card link-card group">
+                <h3 class="card-head">Resumé</h3>
+                <p class="card-foot-body">
+                    A brief and somewhat incomplete
+                    <a href="resume.html" class="pseudo-link">resumé</a>.
+                </p>
+            </article>
+            <article class="full-card link-card group">
+                <h3 class="card-head">Projects</h3>
+                <p class="card-foot-body">
+                    A <a href="projects.html" class="pseudo-link">portfolio</a>
+                    demonstrating some of what I have learned in the
+                    web-development course.
+                </p>
+            </article>
+            <article class="full-card link-card group">
+                <h3 class="card-head">About</h3>
+                <p class="card-foot-body">
+                    The <a href="about.html" class="pseudo-link">about page</a>,
+                    which gives a bit more information on the site, as well as more
+                    detailed copyright information covering the site and resources
+                    that have been used in constructing it.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <section class="flex-1 md:col-span-1">
+        <h3 class="title-card">News</h3>
+        <div class="card-grid-1">
+            <aside class="full-card md:row-start-1 md:col-start-3 md:col-span-1">
+                <h2 class="card-head">Site up!</h2>
+                <p class="card-body">
+                    The site is now published!
+                    Have a fish on a bicycle in celebration.
+                </p>
+                <figure class="card-body pb-2">
+                    <img
+                        class="w-full"
+                        srcset="
+                            assets/img/daren-greenhow--fish-on-a-bicycle-2872129959-240w.jpg 240w,
+                            assets/img/daren-greenhow--fish-on-a-bicycle-2872129959-480w.jpg 480w,
+                            assets/img/daren-greenhow--fish-on-a-bicycle-2872129959.jpg 960w
+                        "
+                        sizes="
+                            (max-width: 300px) 240px,
+                            (max-width: 500px) 480px,
+                            960px
+                        "
+                    >
+                    <figcaption>
+                        Sculpture "Fish on a Bicycle" by Daren Greenhow <br>
+                        Photo by Rob Young (2008)
+                    </figcaption>
+                </figure>
+                <footer class="card-foot">
+                    <p>Josef Meyer (2025-06-27)</p>
+                </footer>
+            </aside>
+        </div>
+    </section>
+</main>
+<footer class="page-footer">
+    <img class="w-12 h-12" src="https://placehold.co/64?text=logo" alt="Logo">
+    <p>&copy; 2023 Adrian Gould and Josef Meyer. All rights reserved.</p>
+    <section class="popup-menu group">
+        <nav class="relative">
+            <ul class="nav-list bottom-0 right-0">
+                <li class="nav-item"><a class="nav-link" href="https://www.northmetrotafe.wa.edu.au">North Metro TAFE</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://dev.screencraft.net.au">ScreenCraft Dev Sites</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">Copyright</a></li>
+            </ul>
+        </nav>
+        <button type="button" class="popup-button group" aria-haspopup="menu">
+            <svg id="icon-bars"
+                 viewBox="0 0 448 512"
+                 class="fill-current stroke-current h-5 ml-auto mr-auto"
+                 aria-label="Icon for TAFE popup"
+            >
+                <use xlink:href="./assets/img/menu-icon.svg#menu-icon"></use>
+            </svg>
+            TAFE
+        </button>
+    </section>
+</footer>
+</body>
+</html>

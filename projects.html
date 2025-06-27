@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Projects | Josef Meyer | Web Technology | Cert 4 IT (Programming)</title>
+    <link rel="stylesheet" href="./assets/css/site.css">
+    <script type="module">
+        import {init} from "./assets/js/phase-5-popup.js";
+        init();
+    </script>
+</head>
+<body class="flex flex-col items-fill h-screen">
+<header class="page-header">
+    <img class="h-12 flex-0" src="assets/img/site-icon.svg" alt="Site Logo">
+    <a class="flex flex-col items-center title-font">
+        <h1 class="text-md font-bold text-center">
+            <span class="hidden sm:inline">Certificate IV</span>
+            <span aria-hidden="true" class="sm:hidden">Cert-IV</span>
+            in IT (Programming)
+        </h1>
+        <h2 class="text-sm font-bold text-center">
+            <span class="hidden sm:inline">Web Tech Project – </span>
+            Projects
+        </h2>
+    </a>
+    <section class="popup-menu group relative">
+        <!-- todo: support keyboard navigation using cursor keys -->
+        <!-- todo: limit tabbing to items and header when menu displayed -->
+        <!-- todo: implement escape to exit menu -->
+        <!-- todo: more contrast between focus colour and background in menus -->
+        <button type="button" class="popup-button group" aria-haspopup="menu">
+            WTP
+            <svg id="icon-bars"
+                 viewBox="0 0 448 512"
+                 class="fill-current stroke-current h-5 ml-auto mr-auto"
+                 aria-label="Icon for site links menu"
+            >
+                <use xlink:href="./assets/img/menu-icon.svg#menu-icon"></use>
+            </svg>
+        </button>
+        <nav class="relative">
+            <ul class="
+                    nav-list right-0 top-0
+                    group-[.active-menu]:block
+                ">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us!</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About this Site</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="resume.html">Josef's Resume</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="projects.html">Example Project(s)</a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+</header>
+<main class="flex-1">
+    <section class="m-3">
+        <h3 class="text-center card-head card-end">About the Projects Page</h3>
+        <p class="data-card m-3">
+            This page will eventually contain links to various projects that
+            demonstrate my abilities.  At the current point in time, I have only
+            added the final portfolio exercise for this course.
+        </p>
+    </section>
+    <section class="m-3">
+        <h3 class="text-center card-head card-end m-0 mb-3">Projects</h3>
+        <div class="card-grid-3 m-3">
+            <p class="card data-card link-card group">
+                <a class="pseudo-link" href="phase-4/" target="_blank">Final portfolio exercise</a>:
+                this involved putting together a layout that showed some articles from the APC Magazine with
+                a JavaScript applet that makes calls to API Ninja.  I was playing around with masonry grid
+                layout in this exercise, and while the page works without it, it looks far better on a browser
+                that has the feature enabled.
+            </p>
+        </div>
+    </section>
+</main>
+<footer class="page-footer">
+    <img class="w-12 h-12" src="assets/img/site-icon.svg" alt="Logo">
+    <p>&copy; 2023 Adrian Gould and Josef Meyer. All rights reserved.</p>
+    <section class="popup-menu group">
+        <nav class="relative">
+            <ul class="nav-list bottom-0 right-0">
+                <li class="nav-item"><a class="nav-link" href="https://www.northmetrotafe.wa.edu.au">North Metro TAFE</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://dev.screencraft.net.au">ScreenCraft Dev Sites</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">Copyright</a></li>
+            </ul>
+        </nav>
+        <button type="button" class="popup-button group" aria-haspopup="menu">
+            <svg id="icon-bars"
+                 viewBox="0 0 448 512"
+                 class="fill-current stroke-current h-5 ml-auto mr-auto"
+                 aria-label="Icon for TAFE popup"
+            >
+                <use xlink:href="./assets/img/menu-icon.svg#menu-icon"></use>
+            </svg>
+            TAFE
+        </button>
+    </section>
+</footer>
+</body>
+</html>

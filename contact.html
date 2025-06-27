@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Contact | Josef Meyer | Web Technology | Cert 4 IT (Programming)</title>
+  <link rel="stylesheet" href="./assets/css/site.css">
+  <script type="module">
+      import {init} from "./assets/js/phase-5-popup.js";
+      init();
+  </script>
+  <script type="module">
+      import {init} from "./assets/js/contacts.js";
+
+      init().then(
+          app => {
+              window.contactApp = app;
+              console.log('Validation code loaded ', app);
+          }
+      ).catch(
+          error => {
+              console.log('Failed to load validation code for contacts ', error);
+              alert('Failed to load client-side validation code.');
+          }
+      );
+  </script>
+  <style>
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        align-items: stretch;
+    }
+  </style>
+</head>
+<body class="h-screen">
+  <header class="page-header">
+  <img class="h-12 flex-0" src="assets/img/Dummy64x64.jpg" alt="Site Logo">
+  <a class="flex flex-col items-center title-font">
+    <h1 class="text-md font-bold text-center">
+      <span class="hidden sm:inline">Certificate IV</span>
+      <span aria-hidden="true" class="sm:hidden">Cert-IV</span>
+      in IT (Programming)
+    </h1>
+    <h2 class="text-sm font-bold text-center">
+      <span class="hidden sm:inline">Web Tech Project – </span>
+      Contact
+    </h2>  </a>
+  <section class="popup-menu group relative">
+    <!-- todo: support keyboard navigation using cursor keys -->
+    <!-- todo: limit tabbing to items and header when menu displayed -->
+    <!-- todo: implement escape to exit menu -->
+    <!-- todo: more contrast between focus colour and background in menus -->
+    <button type="button" class="popup-button group" aria-haspopup="menu">
+      WTP
+      <svg id="icon-bars"
+           viewBox="0 0 448 512"
+           class="fill-current stroke-current h-5 ml-auto mr-auto"
+           aria-label="Icon for site links menu"
+      >
+        <use xlink:href="./assets/img/menu-icon.svg#menu-icon"></use>
+      </svg>
+    </button>
+    <nav class="relative">
+      <ul class="
+                    nav-list right-0 top-0
+                    group-[.active-menu]:block
+                ">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact Us!</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About this Site</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="resume.html">Josef's Resume</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="mywork.html">Example Project(s)</a>
+        </li>
+      </ul>
+    </nav>
+  </section>
+</header>
+  <!-- todo: fix issue where top of form is hidden if too little space -->
+
+  <main class="flex flex-col items-center justify-center h-full">
+    <section class="card full-card m-4 w-full max-w-[60em]">
+      <h3 class="card-head">
+        Contact Us!
+      </h3>
+      <form
+          id="contact-form"
+          class="flex flex-col align-stretch justify-stretch card-foot-body"
+          action="post-contact.html"
+          method="POST"
+      >
+        <!-- todo: implement server-side code to save contact requests. -->
+        <label for="name" class="flex-0 text-left">Name</label>
+        <input id="name" name="name" type="text" placeholder="Name" required class="flex-0">
+        <div class="error hidden flex-0 name-error">
+          Name is required.
+        </div>
+
+        <label for="email" class="flex-0 text-left mt-4">Email</label>
+        <input id="email" type="email" name="email" placeholder="Email" required class="flex-0">
+        <div class="error hidden email-error flex-0">
+          Valid email is required.
+        </div>
+
+        <label for="message" class="flex-0 text-left mt-4">Message</label>
+        <textarea id="message" name="message" placeholder="Message" required class="flex-1"></textarea>
+        <div class="error hidden message-error flex-0">
+          A non-empty message is required.
+        </div>
+
+        <button id="submit" type="submit" class="form-submit-button flex-0 text-center mt-4">Submit</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

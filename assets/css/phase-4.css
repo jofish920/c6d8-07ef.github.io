@@ -1,0 +1,26 @@
+/* Moto G75 5G: 166.09 x 77.24 x 8.34mm */
+@import "phase-4-desktop.css" (min-width: 40em);
+@import "phase-4-mobile.css" not (min-width: 40em);
+@import "phase-4-ninja-desktop.css" (min-width: 60em);
+
+/*
+
+I would prefer to use @container in "phase-4-ninja-desktop.css" for handling
+desktop layout, but while implemented by all recent browser versions, it has
+not yet made it into the standards, and is rejected by validators.
+
+    .ninja-app
+    {
+        container-type: inline-size;
+    }
+
+    @container (width > 15em)
+    {
+        Current content of "phase-4-ninja-desktop.css"
+    }
+
+Getting the correct appearance using @media depends on knowing how other
+CSS rules affect the size of the aside, which makes the solution rather
+fragile.
+
+*/

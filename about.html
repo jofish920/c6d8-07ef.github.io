@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About | Josef Meyer | Web Technology | Cert 4 IT (Programming)</title>
+    <link rel="stylesheet" href="./assets/css/site.css">
+    <script type="module">
+        import {init} from "./assets/js/phase-5-popup.js";
+        init();
+    </script>
+</head>
+<body class="flex flex-col items-fill h-screen bg-site-body-bg">
+<header class="page-header">
+    <img class="h-12 flex-0" src="assets/img/site-icon.svg" alt="Site Logo">
+    <a class="flex flex-col items-center title-font">
+        <h1 class="text-md font-bold text-center">
+            <span class="hidden sm:inline">Certificate IV</span>
+            <span aria-hidden="true" class="sm:hidden">Cert-IV</span>
+            in IT (Programming)
+        </h1>
+        <h2 class="text-sm font-bold text-center">
+            <span class="hidden sm:inline">Web Tech Project –</span>
+            About
+        </h2>
+    </a>
+    <section class="popup-menu group relative">
+        <!-- todo: limit tabbing to items and header when menu displayed -->
+        <button type="button" class="popup-button group" aria-haspopup="menu">
+            WTP
+            <svg id="icon-bars"
+                 viewBox="0 0 448 512"
+                 class="fill-current stroke-current h-5 ml-auto mr-auto"
+                 aria-label="Icon for site links menu"
+            >
+                <use xlink:href="./assets/img/menu-icon.svg#menu-icon"></use>
+            </svg>
+        </button>
+        <nav class="relative">
+            <ul class="
+                    nav-list right-0 top-0
+                    group-[.active-menu]:block
+                ">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us!</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About this Site</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="resume.html">Josef's Resume</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="projects.html">Example Project(s)</a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+</header>
+<main class="flex-1">
+    <section class="m3">
+        <h3 class="title-card">About</h3>
+        <p class="data-card">
+            This site has been construsted to show off some of what I learned in
+            the Web Technologies cluster that is part of the Certificate-IV in IT (Programming)
+            course at North Metropolitan TAFE.  Singnificant goals included developing a
+            site that adapts well to being displayed on either mobile or destop devices and
+            attempts to support basic accessibility requirements.
+        </p>
+    </section>
+    <section class="m-3">
+        <h3 class="text-center card-head card-end">Copyright</h3>
+        <p class="data-card m-3">
+            Content is copyright Adrian Gould, ScreenCraft Teaching Resources and the
+            respective owners of images, text and other related content not originally
+            created by Josef Meyer for the purpose of this assessment.
+        </p>
+    </section>
+    <section class="m-3">
+        <h3 class="text-center card-head card-end m-0 mb-3">Web References</h3>
+        <div class="ref-grid">
+            <!-- style="display: block; grid-column: 1; grid-column-end: 4; justify-content: center; text-align: center;" -->
+          <p class="card data-card link-card">
+            <a
+                href="https://tailwindcss.com/docs"
+                target="_blank"
+            >
+              <span class="bib-author">Tailwind Labs Inc.</span>
+              <span class="bib-year">(2025)</span>
+              <span class="bib-item-name">Documentation - TailwindCSS</span>.
+            </a>
+            <span class="pseudo-link">
+              https://tailwindcss.com/docs
+            </span>
+            <span class="bib-fetched">(Retrieved 2026-06-02)</span>
+          </p>
+          <p class="card data-card link-card">
+            <a
+                href="https://components.dev.screencraft.net.au"
+                target="_blank"
+            >
+              <span class="bib-author">Gould, Adrian</span>
+              <span class="bib-year">(2023)</span>
+              <span class="bib-item-name">ScreenCraft Components for TailwindCSS</span>.
+            </a>
+            <span class="pseudo-link">
+              https://components.dev.screencraft.net.au
+            </span>
+            <span class="bib-fetched">(Retrieved 2026-06-02)</span>
+          </p>
+          <p class="data-card link-card 3xN group">
+            <a href="https://developer.mozilla.org/en-US/docs" target="_blank">
+              <span class="bib-author">Mozilla Corporation</span>
+              <span class="bib-date">(n.d)</span>
+              <span class="bib-item-name">Web technology for developers</span>
+            </a>
+            <span class="bib-url">
+                    https://developer.mozilla.org/en-US/docs
+                </span>
+            <span class="bib-license">CC-BY-SA-2.5</span>
+          </p>
+          <p class="data-card link-card">
+            <a
+                href="https://www.youtube.com/watch?v=nM78am-FC9Q"
+                target="_blank"
+            >
+              <span class="bib-author">Kevin Geary</span>
+              <span class="bib-year">(2023)</span>
+              <span class="bib-item-name">
+                Stop Making This BIG Mistake With Clickable Cards (Use "Clickable Parent" & "Focus Parent" Instead)
+              </span>.
+              <span class="bib-in-work">YouTube video.</span>.
+            </a>
+            <span class="pseudo-link">
+              https://www.youtube.com/watch?v=nM78am-FC9Q
+            </span>
+            <span class="bib-fetched">(Retrieved 2026-06-02)</span>
+            <span class="license"></span>
+          </p>
+          <p class="data-card link-card">
+            <a
+                href="https://inclusive-components.design/cards/"
+                target="_blank"
+            >
+              <span class="bib-author">Pickering, Heydon</span>
+              <span class="bib-year">(2018)</span>
+              <span class="bib-item-name">Cards</span>.
+            </a>
+            <span class="pseudo-link">
+              https://inclusive-components.design/cards/
+            </span>
+            <span class="bib-fetched">(Retrieved 2026-06-22)</span>
+          </p>
+        </div>
+    </section>
+    <section class="m-3">
+        <h3 class="text-center card-head card-end m-0 mb-3">Image References</h3>
+        <div class="ref-grid">
+            <!-- style="display: block; grid-column: 1; grid-column-end: 4; justify-content: center; text-align: center;" -->
+            <p class="card data-card link-card">
+              <a
+                  href="https://www.agent-x.com.au/comic/bigfoot-is-finally-found/"
+                  target="_blank"
+              >
+                <span class="bib-author">Agent-X</span>
+                <span class="bib-year">(2009)</span>
+                <span class="bib-item-name">Bigfoot is Finally Found</span>.
+                In <span class="bib-in-work">Agent-X Comics Website</span>.
+              </a>
+              <span class="bib-url">
+                https://www.agent-x.com.au/comic/bigfoot-is-finally-found/
+              </span>
+              <span class="bib-fetched">(Retrieved 2025-06-02)</span>
+            </p>
+            <p class="card data-card link-card">
+              <a
+                  href="https://geek-and-poke.com/geekandpoke/2015/7/27/the-last-todo"
+                  target="_blank"
+              >
+                <span class="bib-author">Oliver Widder</span>
+                <span class="bib-year">(2015)</span>
+                <span class="bib-item-name">The Last TODO</span>.
+                In <span class="bib-in-work">Geek-and-Poke Website</span>.
+              </a>
+              <span class="pseudo-link">
+                https://geek-and-poke.com/geekandpoke/2015/7/27/the-last-todo
+              </span>
+              <span class="bib-fetched">(Retrieved 2025-06-02)</span>
+              <span class="license">CC-BY-3.0.</span>
+            </p>
+            <p class="card data-card link-card">
+              <a
+                  href="https://commons.wikimedia.org/wiki/File:Logitech_VX_Nano_-_Bottom._Open..jpg"
+                  target="_blank"
+              >
+                <span class="bib-author">KAcper Perschke</span>
+                <span class="bib-year">(2011)</span>
+                <span class="bib-item-name">Bottom view of a Logitech VX Nano. Cover open</span>.
+                <span class="bib-in-work">Wikimedia Commons</span>.
+              </a>
+              <span class="bib-url">
+                https://commons.wikimedia.org/wiki/File:Logitech_VX_Nano_-_Bottom._Open..jpg
+              </span>
+              <span class="bib-fetched">(Retrieved 2025-06-02)</span>
+              <span class="license">CC-BY-SA-3.0</span>
+            </p>
+            <p class="card data-card link-card">
+              <a
+                  href="https://commons.wikimedia.org/wiki/File:Fish_On_A_Bicycle_By_Daren_Greenhow_(2872129959).jpg"
+                  target="_blank"
+              >
+                <span class="bib-author">Young, Rob</span>
+                <span class="bib-year">(2008)</span>
+                <span class="bib-item-name">Fish On A Bicycle By Daren Greenhow</span>.
+                In <span class="bib-in-work">Wikimedia Commons</span>.
+              </a>
+              <span class="bib-url">
+                https://commons.wikimedia.org/wiki/File:Fish_On_A_Bicycle_By_Daren_Greenhow_(2872129959).jpg
+              </span>
+              <span class="bib-fetched">(Retrieved 2026-06-22)</span>
+              <span class="license">CC-BY-2</span>
+            </p>
+        </div>
+    </section>
+    <!-- Add links to any resources used in this assessment, including images, tutorials, TailwindCSS, and so on -->
+</main>
+<footer class="page-footer">
+    <img class="w-12 h-12" src="https://placehold.co/64?text=logo" alt="Logo">
+    <p>&copy; 2023 Adrian Gould and Josef Meyer. All rights reserved.</p>
+    <section class="popup-menu group">
+        <nav class="relative">
+            <ul class="nav-list bottom-0 right-0">
+                <li class="nav-item"><a class="nav-link" href="https://www.northmetrotafe.wa.edu.au">North Metro TAFE</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://dev.screencraft.net.au">ScreenCraft Dev Sites</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">Copyright</a></li>
+            </ul>
+        </nav>
+        <button type="button" class="popup-button group" aria-haspopup="menu">
+            <svg id="icon-bars"
+                 viewBox="0 0 448 512"
+                 class="fill-current stroke-current h-5 ml-auto mr-auto"
+                 aria-label="Icon for TAFE popup"
+            >
+                <use xlink:href="./assets/img/menu-icon.svg#menu-icon"></use>
+            </svg>
+            TAFE
+        </button>
+    </section>
+</footer>
+</body>
+</html>
+
+<!--
+    <p class="data-card link-card">
+      <a
+          href=""
+          target="_blank"
+      >
+        <span class="bib-author"></span>
+        <span class="bib-year">()</span>
+        <span class="bib-item-name"></span>.
+        In <span class="bib-in-work"></span>.
+      </a>
+      <span class="pseudo-link">
+
+      </span>
+      <span class="bib-fetched">(Retrieved 2026-06-02)</span>
+      <span class="license"></span>
+    </p>
+-->
+
+<!-- Retrieved from deleted version.
+
+        <div class="ref-grid">
+            <p class="data-card link-card 3xN group">
+                <a href="portfolio-4.html" target="_blank">Final portfolio exercise:</a>
+                this involved putting together a
+            </p>
+            <p class="data-card link-card 3xN group">
+                <a href="https://components.dev.screencraft.net.au" target="_blank">
+                    <span class="bib-author">Gould, Adrian.</span>
+                    <span class="bib-date">(2023)</span>
+                    <span class="bib-item-name">ScreenCraft Components for TailwindCSS</span>.
+                </a>
+                <span class="bib-url">
+                    https://components.dev.screencraft.net.au
+                </span>.
+                Retrieved on 2025-06-22.
+            </p>
+            <p class="data-card link-card 3xN group">
+                <a href="https://developer.mozilla.org/en-US/docs" target="_blank">
+                    <span class="bib-author">Mozilla Corporation</span>
+                    <span class="bib-date">(n.d)</span>
+                    <span class="bib-item-name">Web technology for developers</span>
+                </a>
+                <span class="bib-url">
+                    https://developer.mozilla.org/en-US/docs
+                </span>
+                <span class="bib-license">CC-BY-SA-2.5</span>
+            </p>
+        </div>
+-->
