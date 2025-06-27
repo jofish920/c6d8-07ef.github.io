@@ -142,3 +142,107 @@ figcaption
 {
     display: none;
 }
+
+.popup-menu
+{
+    position: relative;
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.popup-menu.active-menu
+{
+    background-color: #E3B440;
+}
+
+.nav-list
+{
+    display: none;
+
+    z-index: 10;
+    position: absolute;
+    flex-direction: column;
+    margin-left: auto;
+    place-items: start;
+    padding: 0.25em;
+    width: 16em;
+    background-color: #E3B440; /* lighter goldenrod */
+    list-style-type: none;
+}
+
+.popup-menu.active-menu .nav-list
+{
+    display: flex;
+}
+
+.nav-item
+{
+    display: block;
+    height: 2em;
+    width: 100%;
+    border-bottom: 2px solid #828282;
+}
+
+.nav-item:hover
+{
+    border-bottom: 2px solid #C7C7C7;
+}
+
+.popup-menu.top-right-popup .nav-list
+{
+    right: 0;
+    top: 0.5em;
+}
+
+.nav-item:focus-within
+{
+    background-color: #B0D8E6;
+}
+
+.nav-item a
+{
+    position: relative;
+    display: block;
+    border: none;
+    width: 100%;
+    text-decoration: none;
+    text-align: left;
+    color: black;
+}
+
+.nav-item:hover a
+{
+    color: white;
+}
+
+.popup-menu > button
+{
+    position: relative;
+    border: none;
+    background-color: transparent;
+    z-index: 1;
+    width: 1.5em;
+    height: 1.5em;
+    padding: 0.25em;
+}
+
+.popup-menu > button > img
+{
+    width: 100%;
+    height: 100%;
+}
+
+.popup-menu > button:hover > img
+{
+    filter: invert(1);
+}
+
+.popup-menu > button:focus > img
+{
+    outline: #2563eb;
+}
+
+.popup-menu.active-menu nav
+{
+    display: block;
+}

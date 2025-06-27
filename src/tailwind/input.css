@@ -378,4 +378,8 @@ work from either location.
         background-color: rgba(0, 0, 0, 60%);
         color: white;
     }
+
+    .use-prefix::before {
+        content: attr(data-prefix) " ";
+    }
 }

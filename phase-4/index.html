@@ -13,7 +13,7 @@
     init()
         .then(app => {
             // For debugging
-            window.phase4app = app;
+            window.phase4 = app;
             console.log("Initialised ", app);
         })
         .catch(err => {
@@ -21,6 +21,10 @@
         });
   </script>
 </head>
+<script type="module">
+  import {init} from "../assets/js/phase-5-popup.js";
+  init();
+</script>
 <body>
   <header>
     <img
@@ -29,9 +33,34 @@
         alt="Web Development Portfolio Logo">
     <span class="site-name">Site Name</span>
     <!-- hamburger may turn into a button: -->
-    <a class="menu-button" href="#">
-      <img width="32" height="32" src="../assets/img/MenuIcon.svg" alt="Menu Icon">
-    </a>
+    <section class="popup-menu top-right-popup">
+      <!-- todo: limit tabbing to items and header when menu displayed -->
+      <button type="button" class="popup-button small-header" aria-haspopup="menu">
+        <img
+            src="../assets/img/menu-icon.svg"
+            alt="Icon for site links menu"
+        >
+      </button>
+      <nav class="relative">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a class="nav-link" href="..">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../contact.html">Contact Us!</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../about.html">About this Site</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../resume.html">Josef's Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../projects.html">Example Project(s)</a>
+          </li>
+        </ul>
+      </nav>
+    </section>
     <nav>
       <a href="../index.html">Home</a>
       <a href="#">About</a>
