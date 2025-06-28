@@ -289,58 +289,74 @@ work from either location.
         @apply pl-2;
     }
 
-    .card-grid-1
+    .card
     {
-        @apply mx-3 grid grid-cols-1 gap-3;
+        @apply col-span-1;
     }
 
-    .ref-grid,
-    .card-grid
+    .card:not(.data-card)
     {
-        @apply card-grid-1 md:grid-cols-2 lg:grid-cols-6;
+        @apply flex flex-col;
+    }
+
+    .card-grid-1 > .card:not(.data-card) > .card-end,
+    .card-grid-1 > .card:not(.data-card) > .card-foot-body,
+    .card-grid-2 > .card:not(.data-card) > .card-end,
+    .card-grid-2 > .card:not(.data-card) > .card-foot-body,
+    .card-grid-3 > .card:not(.data-card) > .card-end,
+    .card-grid-4 > .card:not(.data-card) > .card-foot-body
+    {
+        @apply flex-1;
+    }
+
+    .card-grid-X
+    {
+        @apply mx-3 grid gap-3;
+        align-items: stretch;
+    }
+
+    .card-grid-1
+    {
+        @apply card-grid-X grid-cols-1;
     }
 
     .card-grid-2
     {
-        @apply card-grid-1 lg:grid-cols-2;
+        @apply card-grid-X grid-cols-1 md:grid-cols-2;
     }
 
-
-    .card
+    .card-grid-2 > .card:last-child:nth-child(2n+1)
     {
-        @apply col-span-1 lg:col-span-2;
+        @apply col-span-2;
     }
 
-    .link-card
+    .card-grid-3
     {
-        @apply md:col-span-1 lg:col-span-2;
+        @apply card-grid-X grid-cols-1 md:grid-cols-2 lg:grid-cols-6;
     }
 
-    /* todo: generalise to any card type */
-
-    .card-grid-3 > :nth-child(3n):nth-last-child(2) ~ .card,
-    p.link-card:nth-of-type(3n):nth-last-child(2) ~ .link-card
-    {
-        @apply lg:col-span-6;
-    }
-
-    .card-grid-3 > :nth-child(3n):nth-last-child(3) ~ .card,
-    p.link-card:nth-of-type(3n):nth-last-child(3) ~ .link-card
-    {
-        @apply lg:col-span-3;
-    }
-
-    .card-grid-3 > :nth-child(2n):nth-last-child(2) ~ .card,
-    .card-grid-2 > :nth-child(2n):nth-last-child(2) ~ .card,
-    p.link-card:nth-of-type(2n):nth-last-child(2) ~ .link-card
+    .card-grid-3 > .card:last-child:nth-child(2n+1)
     {
         @apply md:col-span-2;
     }
 
-    .pseudo-link
+    .card-grid-3 > .card
     {
-        word-break: break-all;
+        @apply lg:col-span-2;
     }
+
+    .card-grid-3 > .card:nth-last-child(2):nth-child(3n+1),
+    .card-grid-3 > .card:last-child:nth-child(3n+2)
+    {
+        @apply lg:col-span-3;
+    }
+
+    .card-grid-3 > .card:last-child:nth-child(3n+1)
+    {
+        @apply lg:col-span-6;
+    }
+
+    /* todo: generalise to any card type */
 
     .bib-author
     {
