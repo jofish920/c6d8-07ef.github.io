@@ -183,6 +183,12 @@ figcaption
     border-bottom: 2px solid #828282;
 }
 
+.nav-link
+{
+    box-shadow: none;
+    outline: none;
+}
+
 .nav-item:hover
 {
     border-bottom: 2px solid #C7C7C7;

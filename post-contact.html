@@ -14,7 +14,7 @@
 </head>
 <body class="h-screen">
 <header class="page-header">
-  <img class="h-12 flex-0" src="assets/img/Dummy64x64.jpg" alt="Site Logo">
+  <img class="h-12 flex-0" src="assets/img/site-icon.svg" alt="Site Logo">
   <a class="flex flex-col items-center title-font">
     <h1 class="text-md font-bold text-center">
       Certificate IV in IT (Programming)
@@ -39,10 +39,7 @@
       </svg>
     </button>
     <nav class="relative">
-      <ul class="
-                    nav-list right-0 top-0
-                    group-[.active-menu]:block
-                ">
+      <ul class="nav-list right-0 top-0 group-[.active-menu]:block">
         <li class="nav-item">
           <a class="nav-link" href="index.html">Home</a>
         </li>
@@ -63,11 +60,15 @@
   </section>
 </header>
 <main class="relative h-full w-full flex flex-row place-items-center">
-  <section class="card full-card max-w-[35em] mx-auto">
-    <h3 class="card-head">Contact Not Implemented</h3>
-    <p class="card-foot-body text-center">
-      Sorry, but I haven't yet implemented handling requests for
-      contact.  That's my next step.
+  <section class="card full-card link-card max-w-[35em] text-center mx-auto">
+    <h3 class="card-head">Error Sending Message</h3>
+    <p class="card-body">
+      Sorry, but something went wrong sending your message.
+      Under normal circumstances, some JavaScript would handle sending the message
+      to another webserver, but that hasn't happened this time.
+    </p>
+    <p class="card-foot-body">
+      <a class="pseudo-link" href=".">Return Home</a>
     </p>
   </section>
 </main>

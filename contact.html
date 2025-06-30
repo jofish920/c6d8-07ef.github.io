@@ -29,52 +29,52 @@
 </head>
 <body class="h-screen">
   <header class="page-header">
-  <img class="h-12 flex-0" src="assets/img/site-icon.svg" alt="Site Logo">
-  <a class="flex flex-col items-center title-font">
-    <h1 class="text-md font-bold text-center">
-      <span class="max-sm:hidden">
-        North Metropolitan TAFE Certificate IV in IT (Programming)
-      </span>
-      <span class="max-sm:use-prefix" data-prefix="NMT Cert-IV in IT (Prog.)"></span>
-    </h1>
-    <h2 class="text-sm font-bold text-center">
-      <span class="max-sm:hidden">Web Tech Project – </span>
-      Contact
-    </h2>
-  </a>
-  <section class="popup-menu group relative">
-    <!-- todo: limit tabbing to items and header when menu displayed -->
-    <button type="button" class="popup-button group" aria-haspopup="menu">
-      WTP
-      <svg id="icon-bars"
-           viewBox="0 0 448 512"
-           class="fill-current stroke-current h-5 ml-auto mr-auto"
-           aria-label="Icon for site links menu"
-      >
-        <use xlink:href="./assets/img/menu-icon.svg#menu-icon"></use>
-      </svg>
-    </button>
-    <nav class="relative">
-      <ul class="nav-list right-0 top-0 group-[.active-menu]:block">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact Us!</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about.html">About this Site</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="resume.html">Josef's Resume</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="projects.html">Example Project(s)</a>
-        </li>
-      </ul>
-    </nav>
-  </section>
-</header>
+    <img class="h-12 flex-0" src="assets/img/site-icon.svg" alt="Site Logo">
+    <a class="flex flex-col items-center title-font">
+      <h1 class="text-md font-bold text-center">
+        <span class="max-sm:hidden">
+          North Metropolitan TAFE Certificate IV in IT (Programming)
+        </span>
+        <span class="max-sm:use-prefix" data-prefix="NMT Cert-IV in IT (Prog.)"></span>
+      </h1>
+      <h2 class="text-sm font-bold text-center">
+        <span class="max-sm:hidden">Web Tech Project – </span>
+        Contact
+      </h2>
+    </a>
+    <section class="popup-menu group relative">
+      <!-- todo: limit tabbing to items and header when menu displayed -->
+      <button type="button" class="popup-button group" aria-haspopup="menu">
+        WTP
+        <svg id="icon-bars"
+             viewBox="0 0 448 512"
+             class="fill-current stroke-current h-5 ml-auto mr-auto"
+             aria-label="Icon for site links menu"
+        >
+          <use xlink:href="./assets/img/menu-icon.svg#menu-icon"></use>
+        </svg>
+      </button>
+      <nav class="relative">
+        <ul class="nav-list right-0 top-0 group-[.active-menu]:block">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us!</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About this Site</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="resume.html">Josef's Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="projects.html">Example Project(s)</a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+  </header>
   <!-- todo: fix issue where top of form is hidden if too little space -->
 
   <main class="flex flex-col items-center justify-center h-full">
@@ -82,11 +82,12 @@
       <h3 class="card-head">
         Contact Us!
       </h3>
+      <!-- note that post-contact.html should only get shown if something goes wrong -->
       <form
           id="contact-form"
           class="flex flex-col align-stretch justify-stretch card-foot-body"
           action="post-contact.html"
-          method="POST"
+          method="GET"
       >
         <!-- todo: implement server-side code to save contact requests. -->
         <label for="name" class="flex-0 text-left">Name</label>

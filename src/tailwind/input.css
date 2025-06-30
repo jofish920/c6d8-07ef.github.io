@@ -68,7 +68,10 @@ work from either location.
 
     .nav-link
     {
-        @apply block w-full h-full m-0 pb-2 pt-4;
+        @apply
+            block w-full h-full m-0 pb-2 pt-4
+            focus:outline-none focus:shadow-none
+        ;
     }
 
     .nav-list {
@@ -116,29 +119,27 @@ work from either location.
     .card-content
     {
         @apply
-            m-0 mx-[2px] border-0
+            m-0 mx-[2px] px-2
+            border border-x-2
+            border-transparent
             group-focus-within:border-blue-600
-            group-focus-within:border-x-2
-            group-hover:border-blue-400
-            group-hover:border-x-2
-            group-hover:mx-0
         ;
     }
 
     .card-start
     {
-        @apply rounded-t-lg mt-[2px]
-            group-focus-within:border-t-2
-            group-hover:border-t-2
-            group-hover:mt-0
+        @apply rounded-t-lg mt-[2px] pt-2 border-t-2
+            group-focus-within:border-blue-600
+            group-hover:border-blue-400
         ;
     }
 
     .card-end
     {
-        @apply rounded-b-lg mb-[2px]
-            group-focus-within:border-b-2
-            group-hover:border-b-2 group-hover:mb-0
+        @apply rounded-b-lg mb-[2px] pb-2 border-b-2
+            group-focus-within:border-blue-600
+            group-hover:border-blue-400
+            border-b-2
         ;
     }
 
@@ -149,9 +150,7 @@ work from either location.
 
     .data-card.link-card
     {
-        @apply hover:border hover:border-blue-400 hover:border-2
-            focus-within:border focus-within:border-blue-600
-            focus-within:border-2;
+        @apply hover:border-blue-400  focus-within:border-blue-600;
     }
 
     .data-card.link-card :focus-visible,
@@ -164,7 +163,7 @@ work from either location.
     .card-head
     {
         @apply
-            card-content p-2 card-start
+            card-content border-t-2 p-2 card-start
             bg-site-cc-head-bg text-site-cc-head-fg
             font-bold text-xl
             text-center

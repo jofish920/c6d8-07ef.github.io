@@ -10,7 +10,10 @@ const HIDDEN = 'hidden';
 
 class Contacts
 {
-    /** The form element */
+    /**
+     * The form element
+     * @type {HTMLFormElement}
+     */
     get formElement()
     {
         return document.getElementById('contact-form');
@@ -127,10 +130,58 @@ class Contacts
     }
 
     /**
+     * Called when the form is submitted.
+     * @param event {SubmitEvent}
+     */
+    async onSubmit(event)
+    {
+        event.preventDefault();
+
+        const data = new FormData(this.formElement);
+        const response = await fetch(this._action, {
+           method: "POST",
+           body: data
+        });
+        let responseData = {
+            errors: "Error parsing response body."
+        };
+
+        try {
+            responseData = response.json();
+        }
+        catch (ex)
+        {
+            errors.push(ex.message);
+        }
+
+        if (response.ok)
+        {
+            alert("Message delivered!");
+            if (document.referrer)
+            {
+                document.location = document.referrer;
+            }
+        }
+        else
+        {
+            const errors = responseData.errors || [];
+
+            alert(`
+                Failed to deliver message via ${this._action}.
+                
+                ${response.status}: ${response.statusText}
+                
+                ${errors}
+                `);
+        }
+    }
+
+    /**
      * Attaches event listeners that validate a control whenever it is updated.
      */
     addEventListeners()
     {
+        this.formElement.addEventListener('submit', this._sumbitHandler);
         for (const control of this.inputElements)
         {
             control.addEventListener(INPUT_CHANGED, this._changeHandler);
@@ -142,15 +193,31 @@ class Contacts
      */
     removeEventListeners()
     {
+        this.formElement.removeEventListener('submit', this._sumbitHandler);
         for (const control of this.inputElements)
         {
             control.removeEventListener(INPUT_CHANGED, this._changeHandler);
         }
     }
 
+    /**
+     * @param disableSubmitOnError {boolean} clear to let browser handle disabling
+     *   submit when it detects an invalid input.
+     */
     constructor(disableSubmitOnError = false)
     {
+        const host = document.location.host;
+
+        if (host.indexOf("localhost") >= 0)
+        {
+            this._action = "contact-handler.php";
+        }
+        else
+        {
+            this._action = "https://jfm.atta88.au/contact-handler.php";
+        }
         this._changeHandler = this.onInputChanged.bind(this);
+        this._sumbitHandler = this.onSubmit.bind(this);
         this._disableSubmitOnError = disableSubmitOnError;
         this.addEventListeners();
         this.validateAll();
